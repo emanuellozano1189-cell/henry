@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c1unaf703kast"]
+
+[ext_resource type="Script" uid="uid://r45jbe4f42t0" path="res://juego/mapa/mapa_2.gd" id="1_bxml5"]
+[ext_resource type="Texture2D" uid="uid://dhshqxb31akor" path="res://juego/mapa 2/nivel 2.tres" id="1_ruysl"]
+[ext_resource type="PackedScene" uid="uid://be8x8put24h61" path="res://personaje/henry2.tscn" id="2_fp48d"]
+[ext_resource type="PackedScene" uid="uid://cujb4iy1gwo6c" path="res://juego/mapa/node_2d.tscn" id="3_cwfs5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vn8tf"]
+size = Vector2(595, 62)
+
+[node name="mapa 2" type="StaticBody2D" unique_id=1669019296]
+script = ExtResource("1_bxml5")
+
+[node name="Nivel2" type="Sprite2D" parent="." unique_id=836986545]
+texture_filter = 1
+position = Vector2(272.99994, 66)
+scale = Vector2(4.6484375, 6.5)
+texture = ExtResource("1_ruysl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=103812893]
+position = Vector2(273.5, 301)
+shape = SubResource("RectangleShape2D_vn8tf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1209770083]
+position = Vector2(273.5, -172)
+shape = SubResource("RectangleShape2D_vn8tf")
+
+[node name="henry" parent="." unique_id=906376632 instance=ExtResource("2_fp48d")]
+position = Vector2(259, 250)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1929918978]
+offset = Vector2(275, 60)
+zoom = Vector2(1.75, 1.5)
+
+[node name="Node2D" parent="." unique_id=633197605 instance=ExtResource("3_cwfs5")]
+position = Vector2(850, 114)

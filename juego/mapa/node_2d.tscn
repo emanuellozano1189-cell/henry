@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cujb4iy1gwo6c"]
+
+[ext_resource type="Script" uid="uid://7213aifhyf72" path="res://juego/mapa/pajaro.gd" id="1_voull"]
+[ext_resource type="Texture2D" uid="uid://bxkapdxr50d8d" path="res://juego/nivel 2 y 3.png" id="2_li7xq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5bk5"]
+size = Vector2(30, 20)
+
+[node name="Node2D" type="Area2D" unique_id=633197605]
+script = ExtResource("1_voull")
+speed = 20.0
+
+[node name="Nivel2Y3" type="Sprite2D" parent="." unique_id=966694636]
+position = Vector2(2.5, 1)
+texture = ExtResource("2_li7xq")
+region_enabled = true
+region_rect = Rect2(0, 136.5, 69, 42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=591971767]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_u5bk5")
